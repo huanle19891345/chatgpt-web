@@ -3,6 +3,8 @@ FROM node:lts-alpine AS frontend
 
 RUN npm install pnpm -g
 
+RUN pnpm i vite-plugin-pwa -D
+
 WORKDIR /app
 
 COPY ./package.json /app

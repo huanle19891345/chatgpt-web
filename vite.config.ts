@@ -7,7 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 function setupPlugins(env: ImportMetaEnv): PluginOption[] {
   return [
     vue(),
-    env.VITE_GLOB_APP_PWA === 'true' && VitePWA({
+    VitePWA({
       injectRegister: 'auto',
       manifest: {
         name: 'chatGPT',
